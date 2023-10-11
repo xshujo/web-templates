@@ -3,6 +3,7 @@
 }
 
 body {
+  // This code can be changed at will
   width: 100vw;
   height: 100vh;
   overflow: hidden;
@@ -11,12 +12,15 @@ body {
   align-items: center;
 
   .img-container {
+    // Width and height can be changed
+    // Overflow: hidden will prevent the image from overflowing when zooming in
     width: 50vw;
     height: 60vh;
-    background-color: aliceblue;
     overflow: hidden;
 
     .img-image {
+      // Transition time and timing function can be changed but I don't recommend it
+      // Width, height and object-fit ensure the image covers the entire container
       width: 100%;
       height: 100%;
       object-fit: cover;
@@ -24,6 +28,7 @@ body {
       transition: transform 2s ease-out;
 
       &:hover {
+        // Scale can be changed
         transform: scale(1.2);
       }
     }

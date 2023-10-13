@@ -13,7 +13,6 @@ body {
 body .img-container {
   width: 50vw;
   height: 60vh;
-  background-color: aliceblue;
   overflow: hidden;
 }
 body .img-container .img-image {

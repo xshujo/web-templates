@@ -1,1 +1,54 @@
-/*# sourceMappingURL=style.css.map */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+@media only screen and (min-width: 1024px) {
+  body.loaded .menu {
+    width: 100vw;
+  }
+  body.loaded .menu .menu-ul {
+    list-style: none;
+    padding: 2rem 0;
+    margin-left: 2rem;
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 2.5rem;
+  }
+  body.loaded .menu .menu-ul .menu-item {
+    font-family: Helvetica, Arial, sans-serif;
+    opacity: 0;
+    transform: translateY(-2rem);
+    cursor: pointer;
+  }
+  body.loaded .menu .menu-ul .menu-item:nth-of-type(1) {
+    animation: fadeIn 0.4s ease-out 0.3s forwards;
+  }
+  body.loaded .menu .menu-ul .menu-item:nth-of-type(2) {
+    animation: fadeIn 0.4s ease-out 0.4s forwards;
+  }
+  body.loaded .menu .menu-ul .menu-item:nth-of-type(3) {
+    animation: fadeIn 0.4s ease-out 0.5s forwards;
+  }
+  body.loaded .menu .menu-ul .menu-item:nth-of-type(4) {
+    animation: fadeIn 0.4s ease-out 0.6s forwards;
+  }
+  body.loaded .menu .menu-ul .menu-item a {
+    all: unset;
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-2rem);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}/*# sourceMappingURL=style.css.map */

@@ -1,3 +1,5 @@
+/* Consider adding a hover animation on the menu items */
+
 * {
   box-sizing: border-box; // Just to be safe
 }
@@ -12,9 +14,12 @@ body {
 @media only screen and (min-width: 1024px) {
   body.loaded {
     .menu {
+      // Width can be changed
       width: 100vw;
 
       .menu-ul {
+        // List-style removes the bullet, side paddings are removed along with it
+        // Margin, top and bottom paddings and gap can be changed but the animation looks better with more space
         list-style: none;
         padding: 2rem 0;
         margin-left: 2rem;
@@ -23,11 +28,16 @@ body {
         gap: 2.5rem;
 
         .menu-item {
+          // Font-family can be changed
+          // Opacity and transform must be initialized before the animation otherwise they'll already be on the screen
           font-family: Helvetica, Arial, sans-serif;
           opacity: 0;
           transform: translateY(-2rem);
           cursor: pointer;
 
+          // The delay is incremented for each item to create the "wave"
+          // The first menu item is delayed as well to make sure the user doesn't miss the animation
+          // Animation time and delays can be changed but I don't recommend it (keep the delays consistent)
           &:nth-of-type(1) {
             animation: fadeIn 0.4s ease-out 0.6s forwards;
           }
@@ -42,6 +52,7 @@ body {
           }
 
           a {
+            // All: unset removes all styles from link
             all: unset;
           }
         }
@@ -50,6 +61,7 @@ body {
 
     @keyframes fadeIn {
       from {
+        // Translation can be changed
         opacity: 0;
         transform: translateY(-2rem);
       }

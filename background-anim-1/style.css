@@ -1,0 +1,35 @@
+/* To generate gradients: https: //cssgradient.io/ */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+.bg-container {
+    /* Width and height can be changed */
+    /* Gradient colors and angle can be changed */
+    /* I used a 5-color gradient to hide the fact that I couldn't achieve the transition I actually wanted (yet?) */
+    /* I suggest using colors similar to each other */
+    /* Animation time and timing-function can be changed */
+    /* Adjust background-size as needed for smaller viewports */
+    width: 100%;
+    height: 100%;
+    background: rgb(183, 180, 237);
+    background: linear-gradient(70deg, rgba(222, 221, 249, 1) 10%, rgba(222, 239, 242, 1) 35%, rgba(222, 221, 249, 1) 60%, rgba(222, 239, 242, 1) 85%, rgba(222, 221, 249, 1) 100%);
+    background-size: 400% 100%;
+    animation: bg-anim 25s ease-in-out infinite alternate both;
+}
+
+@keyframes bg-anim {
+    from {
+        background-position: 0% 0%;
+    }
+
+    to {
+        background-position: 100% 0%;
+    }
+}

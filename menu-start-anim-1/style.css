@@ -1,55 +1,65 @@
 /* Consider adding a hover animation on the menu items */
+/* Adjust the styles of the menu itself */
+/* The selectors were caused by Live Sass, back when this template used Sass */
 * {
   box-sizing: border-box;
-}
-
-body {
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 @media only screen and (min-width: 1024px) {
-  body.loaded .menu {
-    width: 100vw;
-  }
+
   body.loaded .menu .menu-ul {
+    /* Gap can be changed */
+    /* I don't recommend changing the other display properties */
     list-style: none;
-    padding: 2rem 0;
-    margin-left: 2rem;
+    padding: 5vw;
     display: flex;
     flex-flow: row nowrap;
     gap: 2.5rem;
   }
+
   body.loaded .menu .menu-ul .menu-item {
-    font-family: Helvetica, Arial, sans-serif;
+    /* Translate value can be changed but change it in @keyframe as well */
     opacity: 0;
     transform: translateY(-2rem);
     cursor: pointer;
   }
+
+  /* Add or remove here if you added or removed items in the HTML
+     (adjust nth-of-type if necessary) */
+  /* Animation time, timing function and delay can be changed but I don't recommend it */
   body.loaded .menu .menu-ul .menu-item:nth-of-type(1) {
     animation: fadeIn 0.4s ease-out 0.6s forwards;
   }
+
   body.loaded .menu .menu-ul .menu-item:nth-of-type(2) {
     animation: fadeIn 0.4s ease-out 0.7s forwards;
   }
+
   body.loaded .menu .menu-ul .menu-item:nth-of-type(3) {
     animation: fadeIn 0.4s ease-out 0.8s forwards;
   }
+
   body.loaded .menu .menu-ul .menu-item:nth-of-type(4) {
     animation: fadeIn 0.4s ease-out 0.9s forwards;
   }
-  body.loaded .menu .menu-ul .menu-item a {
+
+  .menu-item a {
+    /* Removes default styles of links */
     all: unset;
   }
+
   @keyframes fadeIn {
     from {
       opacity: 0;
       transform: translateY(-2rem);
     }
+
     to {
       opacity: 1;
       transform: translateY(0);
     }
   }
-}/*# sourceMappingURL=style.css.map */
+}

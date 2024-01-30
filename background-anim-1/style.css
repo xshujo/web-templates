@@ -21,7 +21,7 @@ body {
     background: rgb(183, 180, 237);
     background: linear-gradient(70deg, rgba(222, 221, 249, 1) 10%, rgba(222, 239, 242, 1) 35%, rgba(222, 221, 249, 1) 60%, rgba(222, 239, 242, 1) 85%, rgba(222, 221, 249, 1) 100%);
     background-size: 400% 100%;
-    animation: bg-anim 25s ease-in-out infinite alternate both;
+    animation: bg-anim 25s linear infinite;
 }
 
 @keyframes bg-anim {

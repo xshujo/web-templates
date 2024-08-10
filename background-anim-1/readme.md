@@ -8,4 +8,4 @@ This template is a background gradient animation for all viewports. A gradient v
 
 This template is inspired by the website of [OKAM](https://www.okam.ca/fr)
 
-[Demo](demo.gif)
+[Demo](./demo.gif)
